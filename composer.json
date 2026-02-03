@@ -1,0 +1,30 @@
+{
+  "name": "papi/dotenv",
+  "description": "Dotenv Module",
+  "type": "library",
+  "license": "Apache-2.0",
+  "autoload": {
+    "psr-4": {
+      "PAPI\\Mod\\Dotenv\\": "sources/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PAPI\\Mod\\Dotenv\\Tests\\": "tests/",
+      "PAPI\\Core\\Tests\\": "vendor/papi/core/tests/"
+    }
+  },
+  "scripts": {
+    "lint": "./vendor/bin/php-cs-fixer check || ./vendor/bin/php-cs-fixer fix",
+    "test": "./vendor/bin/phpunit"
+  },
+  "require": {
+    "php": ">=8.5.0",
+    "vlucas/phpdotenv": "^5.6.3",
+    "papi/core": "^1.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.93",
+    "phpunit/phpunit": "^12.5"
+  }
+}
